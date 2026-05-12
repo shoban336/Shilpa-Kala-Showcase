@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shilpa-Kala Showcase</string>
+    <string name="app_tagline">Preserving India\'s Stone Carving Heritage</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_gallery">Gallery</string>
+    <string name="nav_saved">Saved</string>
+    <string name="nav_seller">Seller</string>
+    <string name="btn_enquire_whatsapp">Enquire on WhatsApp</string>
+</resources>

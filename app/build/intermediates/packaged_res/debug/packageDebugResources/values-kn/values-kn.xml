@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ಶಿಲ್ಪ-ಕಲಾ ಪ್ರದರ್ಶನ</string>
+    <string name="app_tagline">ಭಾರತದ ಶಿಲಾ ಕೆತ್ತನೆ ಪರಂಪರೆಯ ಸಂರಕ್ಷಣೆ</string>
+    <string name="btn_enquire_whatsapp">WhatsApp ನಲ್ಲಿ ವಿಚಾರಿಸಿ</string>
+    <string name="nav_gallery">ಗ್ಯಾಲರಿ</string>
+    <string name="nav_home">ಮುಖಪುಟ</string>
+    <string name="nav_saved">ಉಳಿಸಿದವು</string>
+    <string name="nav_seller">ಶಿಲ್ಪಿ</string>
+</resources>
