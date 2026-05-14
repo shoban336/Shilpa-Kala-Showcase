@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.shilpakala.showcase.app-mergeDebugResources-42:/values-en-rIN/values-en-rIN.xml",
+            "outputFile": "com.shilpakala.showcase.app-mergeDebugResources-43:/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
                     "source": "C:\\Users\\sbabu\\.gradle\\caches\\9.0.0\\transforms\\274cd2a3521ab7f02a386692cf01274e\\transformed\\jetified-credentials-1.2.0-rc01\\res\\values-en-rIN\\values-en-rIN.xml",

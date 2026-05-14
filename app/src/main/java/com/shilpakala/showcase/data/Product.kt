@@ -13,5 +13,7 @@ data class Product(
     val dimensions: String,
     val weight: String,
     val rating: Float,
-    val viewCount: Int
+    val viewCount: Int,
+    val imageUrl: Any = "",
+    val wipTimelineImages: List<Any> = emptyList()
 )

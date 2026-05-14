@@ -23,8 +23,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
+import com.bumptech.glide.Glide
+import com.github.chrisbanes.photoview.PhotoView
 import com.shilpakala.showcase.R
 import com.shilpakala.showcase.data.Product
+import android.widget.ImageView
+import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
     private val viewModel: ShowcaseViewModel by viewModels()
@@ -150,6 +154,28 @@ class MainActivity : AppCompatActivity() {
                 setOnClickListener { showGallery() }
             })
             addHeader(product.title, product.productId)
+            addView(FrameLayout(this@MainActivity).apply {
+                layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 300.dp)
+                val progress = android.widget.ProgressBar(this@MainActivity).apply {
+                    layoutParams = FrameLayout.LayoutParams(48.dp, 48.dp, Gravity.CENTER)
+                }
+                val imageView = ImageView(this@MainActivity).apply {
+                    layoutParams = FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+                    scaleType = ImageView.ScaleType.CENTER_CROP
+                    setOnClickListener { showZoomedImage(product.imageUrl) }
+                }
+                addView(progress)
+                addView(imageView)
+                Glide.with(this).load(product.imageUrl).into(object : com.bumptech.glide.request.target.CustomTarget<android.graphics.drawable.Drawable>() {
+                    override fun onResourceReady(resource: android.graphics.drawable.Drawable, transition: com.bumptech.glide.request.transition.Transition<in android.graphics.drawable.Drawable>?) {
+                        progress.visibility = View.GONE
+                        imageView.setImageDrawable(resource)
+                    }
+                    override fun onLoadCleared(placeholder: android.graphics.drawable.Drawable?) {
+                        imageView.setImageDrawable(placeholder)
+                    }
+                })
+            })
             addView(card {
                 addText("INR ${product.price}", 24f, R.color.heritage_brown, true)
                 addText("${product.availability} | ${product.material} | ${product.carvingStyle}", 15f, R.color.charcoal)
@@ -157,6 +183,36 @@ class MainActivity : AppCompatActivity() {
                 addText("Stone freshness: ${product.stoneFreshness}", 14f, R.color.charcoal)
                 addText(product.description, 15f, R.color.charcoal)
             })
+
+            if (product.wipTimelineImages.isNotEmpty()) {
+                addSectionTitle("Work-in-Progress (Stone to Statue)")
+                addView(HorizontalScrollView(this@MainActivity).apply {
+                    isHorizontalScrollBarEnabled = false
+                    addView(LinearLayout(this@MainActivity).apply {
+                        orientation = LinearLayout.HORIZONTAL
+                        setPadding(16.dp, 8.dp, 16.dp, 16.dp)
+                        product.wipTimelineImages.forEachIndexed { index, url ->
+                            addView(LinearLayout(this@MainActivity).apply {
+                                orientation = LinearLayout.VERTICAL
+                                gravity = Gravity.CENTER
+                                addView(card {
+                                    setPadding(0)
+                                    addView(ImageView(this@MainActivity).apply {
+                                        layoutParams = FrameLayout.LayoutParams(120.dp, 120.dp)
+                                        scaleType = ImageView.ScaleType.CENTER_CROP
+                                        Glide.with(this).load(url).into(this)
+                                        setOnClickListener { showZoomedImage(url) }
+                                    })
+                                })
+                                addText("Stage ${index + 1}", 12f, R.color.charcoal)
+                            }, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT).apply {
+                                marginEnd = 12.dp
+                            })
+                        }
+                    })
+                })
+            }
+
             addView(card {
                 addText(seller.name, 19f, R.color.charcoal, true)
                 addText("${seller.village} | ${seller.yearsOfExperience} years experience", 14f, R.color.charcoal)
@@ -165,6 +221,28 @@ class MainActivity : AppCompatActivity() {
             addView(actionRow(product, seller.whatsappNumber))
         })
     }
+
+    private fun showZoomedImage(url: Any) {
+        val root = FrameLayout(this).apply {
+            setBackgroundColor(Color.BLACK)
+            addView(PhotoView(this@MainActivity).apply {
+                layoutParams = FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+                Glide.with(this).load(url).into(this)
+            })
+            addView(TextView(this@MainActivity).apply {
+                text = "✕"
+                textSize = 32f
+                setTextColor(Color.WHITE)
+                setPadding(20.dp)
+                layoutParams = FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, Gravity.TOP or Gravity.END)
+                setOnClickListener { dialog?.dismiss() }
+            })
+        }
+        dialog = AlertDialog.Builder(this, android.R.style.Theme_Black_NoTitleBar_Fullscreen)
+            .setView(root)
+            .show()
+    }
+    private var dialog: AlertDialog? = null
 
     private fun actionRow(product: Product, phone: String): View = LinearLayout(this).apply {
         orientation = LinearLayout.HORIZONTAL
@@ -331,9 +409,27 @@ private class ProductAdapter(
             card.addView(LinearLayout(card.context).apply {
                 orientation = LinearLayout.VERTICAL
                 setPadding(12.dp)
-                addView(View(context).apply {
-                    setBackgroundColor(Color.rgb(212, 168, 67))
-                }, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 96.dp))
+                addView(FrameLayout(context).apply {
+                    layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 120.dp)
+                    val progress = android.widget.ProgressBar(context).apply {
+                        layoutParams = FrameLayout.LayoutParams(32.dp, 32.dp, Gravity.CENTER)
+                    }
+                    val imageView = ImageView(context).apply {
+                        layoutParams = FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+                        scaleType = ImageView.ScaleType.CENTER_CROP
+                    }
+                    addView(progress)
+                    addView(imageView)
+                    Glide.with(this).load(product.imageUrl).into(object : com.bumptech.glide.request.target.CustomTarget<android.graphics.drawable.Drawable>() {
+                        override fun onResourceReady(resource: android.graphics.drawable.Drawable, transition: com.bumptech.glide.request.transition.Transition<in android.graphics.drawable.Drawable>?) {
+                            progress.visibility = View.GONE
+                            imageView.setImageDrawable(resource)
+                        }
+                        override fun onLoadCleared(placeholder: android.graphics.drawable.Drawable?) {
+                            imageView.setImageDrawable(placeholder)
+                        }
+                    })
+                })
                 addView(TextView(context).apply {
                     text = product.title
                     textSize = 16f

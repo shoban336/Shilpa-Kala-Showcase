@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.shilpakala.showcase.app-mergeDebugResources-42:/values-ka/values-ka.xml",
+            "outputFile": "com.shilpakala.showcase.app-mergeDebugResources-43:/values-ka/values-ka.xml",
             "map": [
                 {
                     "source": "C:\\Users\\sbabu\\.gradle\\caches\\9.0.0\\transforms\\3ce9f26f2b39f8c3f5fd19fb011a51b8\\transformed\\browser-1.4.0\\res\\values-ka\\values-ka.xml",

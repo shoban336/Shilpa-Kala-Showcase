@@ -7,6 +7,12 @@ color heritage_ink
 color leaf
 color stone
 drawable ic_launcher_foreground
+drawable img_buddha
+drawable img_elephant
+drawable img_ganesha
+drawable img_hoysala_panel
+drawable img_nandi
+drawable img_saraswati
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name

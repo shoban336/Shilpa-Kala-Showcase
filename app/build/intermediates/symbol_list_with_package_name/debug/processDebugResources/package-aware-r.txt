@@ -3070,6 +3070,12 @@ drawable ic_other_sign_in
 drawable ic_passkey
 drawable ic_password
 drawable ic_search_black_24
+drawable img_buddha
+drawable img_elephant
+drawable img_ganesha
+drawable img_hoysala_panel
+drawable img_nandi
+drawable img_saraswati
 drawable indeterminate_static
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3356,6 +3362,7 @@ id frost
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap

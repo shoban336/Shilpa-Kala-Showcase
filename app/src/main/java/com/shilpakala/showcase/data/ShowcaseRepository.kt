@@ -1,5 +1,7 @@
 package com.shilpakala.showcase.data
 
+import com.shilpakala.showcase.R
+
 class ShowcaseRepository {
     val sellers = listOf(
         Seller(
@@ -42,7 +44,14 @@ class ShowcaseRepository {
             dimensions = "36 x 24 x 5 in",
             weight = "92 kg",
             rating = 4.9f,
-            viewCount = 1240
+            viewCount = 1240,
+            imageUrl = R.drawable.img_hoysala_panel,
+            wipTimelineImages = listOf(
+                R.drawable.img_hoysala_panel,
+                R.drawable.img_hoysala_panel,
+                R.drawable.img_hoysala_panel,
+                R.drawable.img_hoysala_panel
+            )
         ),
         Product(
             productId = "SKS-2026-00002",
@@ -57,7 +66,8 @@ class ShowcaseRepository {
             dimensions = "48 x 30 x 28 in",
             weight = "210 kg",
             rating = 4.7f,
-            viewCount = 918
+            viewCount = 918,
+            imageUrl = R.drawable.img_nandi
         ),
         Product(
             productId = "SKS-2026-00003",
@@ -72,7 +82,8 @@ class ShowcaseRepository {
             dimensions = "22 x 12 x 8 in",
             weight = "9 kg",
             rating = 4.8f,
-            viewCount = 681
+            viewCount = 681,
+            imageUrl = R.drawable.img_saraswati
         ),
         Product(
             productId = "SKS-2026-00004",
@@ -87,13 +98,280 @@ class ShowcaseRepository {
             dimensions = "30 x 20 x 16 in",
             weight = "74 kg",
             rating = 4.6f,
-            viewCount = 522
+            viewCount = 522,
+            imageUrl = R.drawable.img_ganesha
+        ),
+        Product(
+            productId = "SKS-2026-00005",
+            sellerId = "seller-002",
+            title = "Rosewood Elephant Pair",
+            description = "Intricately carved rosewood elephants with bone inlay work.",
+            material = "Wood",
+            carvingStyle = "Traditional",
+            price = 45000,
+            availability = "Available",
+            stoneFreshness = "Aged",
+            dimensions = "12 x 8 x 6 in",
+            weight = "4 kg",
+            rating = 4.9f,
+            viewCount = 412,
+            imageUrl = R.drawable.img_elephant
+        ),
+        Product(
+            productId = "SKS-2026-00006",
+            sellerId = "seller-001",
+            title = "Shiva Nataraja",
+            description = "Bronze-finish stone sculpture of the cosmic dancer.",
+            material = "Stone",
+            carvingStyle = "Chola",
+            price = 210000,
+            availability = "On Order",
+            stoneFreshness = "Antique Finish",
+            dimensions = "40 x 32 x 10 in",
+            weight = "85 kg",
+            rating = 4.8f,
+            viewCount = 823,
+            imageUrl = "https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=800&q=80"
+        ),
+        Product(
+            productId = "SKS-2026-00007",
+            sellerId = "seller-002",
+            title = "Sandalwood Buddha",
+            description = "Pure sandalwood Buddha in meditative pose, releasing natural fragrance.",
+            material = "Sandalwood",
+            carvingStyle = "Modern",
+            price = 320000,
+            availability = "Exclusive",
+            stoneFreshness = "Premium",
+            dimensions = "10 x 6 x 4 in",
+            weight = "1.5 kg",
+            rating = 5.0f,
+            viewCount = 1540,
+            imageUrl = R.drawable.img_buddha
+        ),
+        Product(
+            productId = "SKS-2026-00008",
+            sellerId = "seller-001",
+            title = "Granite Pillar Base",
+            description = "Reconstruction of a star-shaped Hoysala pillar base.",
+            material = "Granite",
+            carvingStyle = "Hoysala",
+            price = 95000,
+            availability = "Available",
+            stoneFreshness = "Fresh",
+            dimensions = "24 x 24 x 24 in",
+            weight = "180 kg",
+            rating = 4.7f,
+            viewCount = 312,
+            imageUrl = "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=800&q=80"
+        ),
+        Product(
+            productId = "SKS-2026-00009",
+            sellerId = "seller-001",
+            title = "Apsara Relief",
+            description = "Detailed celestial dancer relief carved in soft soapstone.",
+            material = "Soapstone",
+            carvingStyle = "Hoysala",
+            price = 125000,
+            availability = "Available",
+            stoneFreshness = "Fresh",
+            dimensions = "24 x 12 x 4 in",
+            weight = "35 kg",
+            rating = 4.9f,
+            viewCount = 678,
+            imageUrl = "https://images.unsplash.com/photo-1516108317508-6788f6a160e6?auto=format&fit=crop&w=800&q=80"
+        ),
+        Product(
+            productId = "SKS-2026-00010",
+            sellerId = "seller-002",
+            title = "Wooden Temple Door",
+            description = "Solid teak door with ten incarnations of Vishnu carved.",
+            material = "Wood",
+            carvingStyle = "Dravidian",
+            price = 450000,
+            availability = "On Order",
+            stoneFreshness = "Seasoned",
+            dimensions = "84 x 42 x 4 in",
+            weight = "110 kg",
+            rating = 4.9f,
+            viewCount = 2100,
+            imageUrl = "https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=800&q=80"
+        ),
+        Product(
+            productId = "SKS-2026-00011",
+            sellerId = "seller-001",
+            title = "Black Stone Bull",
+            description = "Highly polished monolithic bull for temple courtyards.",
+            material = "Black Granite",
+            carvingStyle = "Chola",
+            price = 380000,
+            availability = "Available",
+            stoneFreshness = "Monolithic",
+            dimensions = "60 x 36 x 30 in",
+            weight = "450 kg",
+            rating = 4.8f,
+            viewCount = 450,
+            imageUrl = "https://images.unsplash.com/photo-1506806732259-39c2d4ad68b9?auto=format&fit=crop&w=800&q=80"
+        ),
+        Product(
+            productId = "SKS-2026-00012",
+            sellerId = "seller-002",
+            title = "Krishna with Flute",
+            description = "Rosewood Krishna in Tribhanga pose with fine detailing.",
+            material = "Wood",
+            carvingStyle = "Traditional",
+            price = 88000,
+            availability = "Available",
+            stoneFreshness = "Aged",
+            dimensions = "30 x 10 x 8 in",
+            weight = "12 kg",
+            rating = 4.7f,
+            viewCount = 890,
+            imageUrl = "https://images.unsplash.com/photo-1566914930353-85579f1ec588?auto=format&fit=crop&w=800&q=80"
+        ),
+        Product(
+            productId = "SKS-2026-00013",
+            sellerId = "seller-001",
+            title = "Goddess Durga",
+            description = "Granite Durga with multiple arms, each holding a weapon.",
+            material = "Granite",
+            carvingStyle = "Dravidian",
+            price = 550000,
+            availability = "On Order",
+            stoneFreshness = "Fresh",
+            dimensions = "72 x 48 x 20 in",
+            weight = "850 kg",
+            rating = 5.0f,
+            viewCount = 1230,
+            imageUrl = "https://images.unsplash.com/photo-1614030424754-24d1f93e34b5?auto=format&fit=crop&w=800&q=80"
+        ),
+        Product(
+            productId = "SKS-2026-00014",
+            sellerId = "seller-001",
+            title = "Meditating Monk",
+            description = "Grey stone sculpture for Zen gardens and minimalist spaces.",
+            material = "Stone",
+            carvingStyle = "Modern",
+            price = 65000,
+            availability = "Available",
+            stoneFreshness = "Fresh",
+            dimensions = "24 x 18 x 18 in",
+            weight = "60 kg",
+            rating = 4.6f,
+            viewCount = 432,
+            imageUrl = "https://images.unsplash.com/photo-1506191652687-1937118507dd?auto=format&fit=crop&w=800&q=80"
+        ),
+        Product(
+            productId = "SKS-2026-00015",
+            sellerId = "seller-002",
+            title = "Peacock Panel",
+            description = "Intricate wood panel featuring dancing peacocks.",
+            material = "Teak Wood",
+            carvingStyle = "Traditional",
+            price = 52000,
+            availability = "Available",
+            stoneFreshness = "Seasoned",
+            dimensions = "36 x 18 x 2 in",
+            weight = "7 kg",
+            rating = 4.8f,
+            viewCount = 567,
+            imageUrl = "https://images.unsplash.com/photo-1594145070248-18e0f107380a?auto=format&fit=crop&w=800&q=80"
+        ),
+        Product(
+            productId = "SKS-2026-00016",
+            sellerId = "seller-001",
+            title = "Sun God Chariot Wheel",
+            description = "Replica of Konark Sun Temple wheel in stone.",
+            material = "Stone",
+            carvingStyle = "Traditional",
+            price = 150000,
+            availability = "On Order",
+            stoneFreshness = "Antique Finish",
+            dimensions = "36 x 36 x 6 in",
+            weight = "120 kg",
+            rating = 4.9f,
+            viewCount = 789,
+            imageUrl = "https://images.unsplash.com/photo-1548013146-72479768bbaa?auto=format&fit=crop&w=800&q=80"
+        ),
+        Product(
+            productId = "SKS-2026-00017",
+            sellerId = "seller-001",
+            title = "Stone Lamp (Deepa)",
+            description = "Functional stone oil lamp for heritage homes.",
+            material = "Black Granite",
+            carvingStyle = "Traditional",
+            price = 28000,
+            availability = "Available",
+            stoneFreshness = "Fresh",
+            dimensions = "18 x 10 x 10 in",
+            weight = "15 kg",
+            rating = 4.7f,
+            viewCount = 345,
+            imageUrl = "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80"
+        ),
+        Product(
+            productId = "SKS-2026-00018",
+            sellerId = "seller-002",
+            title = "Vishnu in Anantashayana",
+            description = "Sleeping Vishnu on Adishesha carved in rosewood.",
+            material = "Rosewood",
+            carvingStyle = "Traditional",
+            price = 180000,
+            availability = "Exclusive",
+            stoneFreshness = "Premium",
+            dimensions = "48 x 20 x 12 in",
+            weight = "45 kg",
+            rating = 5.0f,
+            viewCount = 1120,
+            imageUrl = "https://images.unsplash.com/photo-1582266255765-fa5cf1a1d501?auto=format&fit=crop&w=800&q=80"
+        ),
+        Product(
+            productId = "SKS-2026-00019",
+            sellerId = "seller-001",
+            title = "Ganga Jumna Panel",
+            description = "River goddess pair in high relief stone.",
+            material = "Marble",
+            carvingStyle = "Modern",
+            price = 240000,
+            availability = "Available",
+            stoneFreshness = "Fresh",
+            dimensions = "60 x 24 x 8 in",
+            weight = "140 kg",
+            rating = 4.8f,
+            viewCount = 678,
+            imageUrl = "https://images.unsplash.com/photo-1563292325-2434195a6ec8?auto=format&fit=crop&w=800&q=80"
+        ),
+        Product(
+            productId = "SKS-2026-00020",
+            sellerId = "seller-001",
+            title = "Monolithic Pillar",
+            description = "A single-stone carved pillar with intricate floral motifs.",
+            material = "Granite",
+            carvingStyle = "Dravidian",
+            price = 750000,
+            availability = "On Order",
+            stoneFreshness = "Monolithic",
+            dimensions = "96 x 18 x 18 in",
+            weight = "1200 kg",
+            rating = 4.9f,
+            viewCount = 3100,
+            imageUrl = "https://images.unsplash.com/photo-1544084801-1caefa73d5dd?auto=format&fit=crop&w=800&q=80"
         )
     )
 
     val stories = listOf(
-        HeritageStory("story-hoysala", "The Language of Hoysala Detail", "Hoysala", "Dense ornament, star-shaped temple plans, and patient micro-carving define this tradition."),
-        HeritageStory("story-dravidian", "Dravidian Proportion and Presence", "Dravidian", "Balanced forms, sacred geometry, and durable temple sculpture practices.")
+        HeritageStory(
+            storyId = "story-hoysala",
+            title = "The Celestial Art of Hoysala",
+            style = "Hoysala",
+            description = "Emerging in the 11th century, the Hoysala style is defined by its extreme intricacy. Unlike the monolithic Chola sculptures, Hoysala artisans used 'Chloritic Schist' (soapstone), which is soft when quarried but hardens over time. This allowed for 'jewelry-like' detailing on stone—where even individual fingernails and lace patterns on garments were carved with precision. The star-shaped temple plans of Belur and Halebidu remain the pinnacle of this artisanal mastery."
+        ),
+        HeritageStory(
+            storyId = "story-dravidian",
+            title = "Dravidian Monoliths",
+            style = "Dravidian",
+            description = "Characterized by grand proportions and the use of hard granite, Dravidian carving focuses on the spiritual 'Prana' (life force) of the deity. It emphasizes structural strength and sacred geometry (Vastu Shastra)."
+        )
     )
 
     fun sellerFor(product: Product): Seller = sellers.first { it.uid == product.sellerId }

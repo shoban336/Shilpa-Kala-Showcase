@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.shilpakala.showcase.app-mergeDebugResources-42:/values-lv/values-lv.xml",
+            "outputFile": "com.shilpakala.showcase.app-mergeDebugResources-43:/values-lv/values-lv.xml",
             "map": [
                 {
                     "source": "C:\\Users\\sbabu\\.gradle\\caches\\9.0.0\\transforms\\826b86380ee51ad64e3d27e9f06a3e3e\\transformed\\jetified-play-services-base-18.1.0\\res\\values-lv\\values.xml",

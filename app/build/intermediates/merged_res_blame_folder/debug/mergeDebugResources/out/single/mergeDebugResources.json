@@ -1,14 +1,38 @@
 [
     {
-        "merged": "com.shilpakala.showcase.app-debug-44:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.shilpakala.showcase.app-main-46:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.shilpakala.showcase.app-debug-45:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.shilpakala.showcase.app-main-47:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "com.shilpakala.showcase.app-debug-44:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.shilpakala.showcase.app-main-46:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.shilpakala.showcase.app-debug-45:/drawable_img_hoysala_panel.jpg.flat",
+        "source": "com.shilpakala.showcase.app-main-47:/drawable/img_hoysala_panel.jpg"
     },
     {
-        "merged": "com.shilpakala.showcase.app-debug-44:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.shilpakala.showcase.app-main-46:/drawable/ic_launcher_foreground.xml"
+        "merged": "com.shilpakala.showcase.app-debug-45:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.shilpakala.showcase.app-main-47:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.shilpakala.showcase.app-debug-45:/drawable_img_nandi.jpg.flat",
+        "source": "com.shilpakala.showcase.app-main-47:/drawable/img_nandi.jpg"
+    },
+    {
+        "merged": "com.shilpakala.showcase.app-debug-45:/drawable_img_buddha.jpg.flat",
+        "source": "com.shilpakala.showcase.app-main-47:/drawable/img_buddha.jpg"
+    },
+    {
+        "merged": "com.shilpakala.showcase.app-debug-45:/drawable_img_ganesha.webp.flat",
+        "source": "com.shilpakala.showcase.app-main-47:/drawable/img_ganesha.webp"
+    },
+    {
+        "merged": "com.shilpakala.showcase.app-debug-45:/drawable_img_saraswati.webp.flat",
+        "source": "com.shilpakala.showcase.app-main-47:/drawable/img_saraswati.webp"
+    },
+    {
+        "merged": "com.shilpakala.showcase.app-debug-45:/drawable_img_elephant.jpg.flat",
+        "source": "com.shilpakala.showcase.app-main-47:/drawable/img_elephant.jpg"
+    },
+    {
+        "merged": "com.shilpakala.showcase.app-debug-45:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.shilpakala.showcase.app-main-47:/mipmap-anydpi-v26/ic_launcher.xml"
     }
 ]
